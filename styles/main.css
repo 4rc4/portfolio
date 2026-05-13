@@ -443,20 +443,37 @@ main {
   border-bottom: 1px solid rgba(255,255,255,.08);
   background: rgba(255,255,255,.03);
 }
+
 .ticker {
-  padding: 16px 0;
   overflow: hidden;
+  padding: 16px 0;
 }
-.ticker-a { border-bottom: 1px solid rgba(255,255,255,.05); }
+
+.ticker + .ticker {
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
 .ticker-track {
   display: flex;
   width: max-content;
-  gap: 22px;
-  align-items: center;
-  animation: ticker 28s linear infinite;
+  will-change: transform;
+  animation: tickerMove 28s linear infinite;
 }
-.ticker-track.reverse { animation-direction: reverse; animation-duration: 24s; }
-.ticker-track span {
+
+.ticker[data-direction="right"] .ticker-track {
+  animation-direction: reverse;
+  animation-duration: 24s;
+}
+
+.ticker-group {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 22px;
+  padding-right: 22px;
+}
+
+.ticker-group span {
   position: relative;
   color: var(--text);
   font-size: .95rem;
@@ -464,14 +481,21 @@ main {
   text-transform: uppercase;
   white-space: nowrap;
 }
-.ticker-track span::after {
+
+.ticker-group span::after {
   content: "✦";
   margin-left: 22px;
   color: var(--muted-2);
 }
-@keyframes ticker {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+
+@keyframes tickerMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(var(--ticker-distance, -50%));
+  }
 }
 
 .section-head {
