@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yusuf Arca Çiçek — bilingual portfolio website." />
+  <title>Yusuf Arca Çiçek — Portfolio</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+    <div class="bg-vignette"></div>
+    <div class="beam beam-a"></div>
+    <div class="beam beam-b"></div>
+    <div class="beam beam-c"></div>
+  </div>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-panel">
+      <p class="loader-kicker">TAKE 01 / PORTFOLIO</p>
+      <h2 id="loaderPhrase">loading portfolio</h2>
+      <div class="loader-track"><span></span></div>
+    </div>
+  </div>
+
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="hud">
+    <a class="hud-brand" href="#top" aria-label="Go to top">
+      <span class="hud-dot"></span>
+      <span class="hud-brand-text">YUSUF ARCA ÇİÇEK</span>
+    </a>
+
+    <nav class="hud-nav" aria-label="Primary navigation">
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="hud-actions">
+      <button id="langToggle" class="lang-button" type="button" aria-label="Switch language">TR</button>
+      <a class="hud-button" href="assets/Yusuf-Arca-Cicek-CV.pdf" download data-i18n="nav.cv">Download CV</a>
+    </div>
+  </header>
+
+  <div class="side-rail" aria-hidden="true">
+    <div class="side-rail-line"></div>
+    <div class="side-rail-progress" id="scrollProgress"></div>
+    <span>SCROLL</span>
+  </div>
+
+  <main id="top">
+    <section class="scene hero" id="hero">
+      <div class="frame-label reveal">SOFTWARE ENGINEERING STUDENT / WEB / MOBILE / INTERACTIVE</div>
+
+      <div class="hero-layout">
+        <div class="hero-copy reveal hero-shift">
+          <h1 class="hero-title" data-i18n="hero.title">I build software with a visual mind.</h1>
+          <p class="hero-text" data-i18n="hero.text">
+            I'm Yusuf Arca Çiçek. I like building websites, app concepts, and interactive experiences that feel clean, a little playful, and actually useful.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button magnetic" href="#projects" data-i18n="hero.primary">See the projects</a>
+            <a class="secondary-button magnetic" href="#contact" data-i18n="hero.secondary">Contact me</a>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal delay-1 tilt-card">
+          <div class="panel-head">
+            <div>
+              <p class="panel-label">PROFILE</p>
+              <h2>Yusuf Arca Çiçek</h2>
+            </div>
+            <img src="assets/profile.png" alt="Portrait of Yusuf Arca Çiçek" class="profile-shot" />
+          </div>
+
+          <div class="panel-grid">
+            <div>
+              <span data-i18n="hero.panelRoleLabel">Role</span>
+              <strong data-i18n="hero.panelRole">Software Engineering Student</strong>
+            </div>
+            <div>
+              <span data-i18n="hero.panelBaseLabel">Base</span>
+              <strong>Wrocław / Istanbul</strong>
+            </div>
+            <div>
+              <span data-i18n="hero.panelFocusLabel">Focus</span>
+              <strong data-i18n="hero.panelFocus">Web, mobile, UI, interactive ideas</strong>
+            </div>
+            <div>
+              <span data-i18n="hero.panelStatusLabel">Status</span>
+              <strong data-i18n="hero.panelStatus">Open to internships and collaborations</strong>
+            </div>
+          </div>
+
+          <div class="panel-tags">
+            <span>HTML/CSS</span>
+            <span>JavaScript</span>
+            <span>Flutter</span>
+            <span>Unity</span>
+            <span>Python</span>
+            <span>GitHub</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bottom reveal delay-2">
+        <div class="hero-note" data-i18n="hero.note">This site is here to show real work, real learning, and the way I like to build.</div>
+        <div class="hero-stats">
+          <div><strong class="count" data-target="5">0</strong><span data-i18n="hero.statProjects">Main projects</span></div>
+          <div><strong class="count" data-target="3">0</strong><span data-i18n="hero.statAreas">Build areas</span></div>
+          <div><strong class="count" data-target="2">0</strong><span data-i18n="hero.statLanguages">Site languages</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker-wrap">
+      <div class="ticker ticker-a">
+        <div class="ticker-track">
+          <span>WEB DESIGN</span><span>MOBILE APP IDEAS</span><span>INTERACTIVE UI</span><span>PRODUCT THINKING</span><span>FRONTEND</span><span>ANIMATION</span><span>GAME FEEL</span>
+          <span>WEB DESIGN</span><span>MOBILE APP IDEAS</span><span>INTERACTIVE UI</span><span>PRODUCT THINKING</span><span>FRONTEND</span><span>ANIMATION</span><span>GAME FEEL</span>
+        </div>
+      </div>
+      <div class="ticker ticker-b">
+        <div class="ticker-track reverse">
+          <span>HTML</span><span>CSS</span><span>JAVASCRIPT</span><span>FLUTTER</span><span>DART</span><span>UNITY</span><span>PYTHON</span><span>SUPABASE</span>
+          <span>HTML</span><span>CSS</span><span>JAVASCRIPT</span><span>FLUTTER</span><span>DART</span><span>UNITY</span><span>PYTHON</span><span>SUPABASE</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene story" id="about">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="story.kicker">A quick introduction</p>
+        <h2 data-i18n="story.title">I am still learning. I just prefer learning by making real things.</h2>
+      </div>
+      <div class="story-grid">
+        <article class="glass-card reveal">
+          <p data-i18n="story.p1">I study Software Development at WSB Merito Wrocław and spend a lot of time trying ideas out in actual projects instead of just keeping them in notes. I like work that has both structure and personality.</p>
+        </article>
+        <article class="glass-card reveal delay-1">
+          <p data-i18n="story.p2">My interests naturally mix code with visuals. That is why I enjoy interfaces, animation, interaction, and product ideas — not just writing logic in the background.</p>
+        </article>
+        <article class="glass-card reveal delay-2">
+          <p data-i18n="story.p3">This portfolio is not trying to sound bigger than I am. It is a clean selection of what I made, what I learned, and what kind of developer I am becoming.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene projects" id="projects">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="projects.kicker">Selected work</p>
+        <h2 data-i18n="projects.title">Projects that already exist, not fake case studies.</h2>
+        <p class="section-copy" data-i18n="projects.text">A mix of product thinking, UI work, web development, and small interactive experiments.</p>
+      </div>
+
+      <div class="project-list">
+        <article class="project-card reveal spotlight-card" style="--card-accent:#8c6cff;">
+          <div class="project-meta">
+            <span class="project-index">01</span>
+            <span class="project-kind" data-i18n="project1.kind">Flutter app / productivity</span>
+          </div>
+          <div class="project-main">
+            <div class="project-copy">
+              <h3>Catudy</h3>
+              <p data-i18n="project1.desc">A focus/productivity app concept that combines the timer, XP, rewards, cosmetics, calendar, reminders, pet system, and multiplayer lobby idea in one product.</p>
+              <ul class="project-points">
+                <li data-i18n="project1.point1">Gamified focus system with XP, coins, and cosmetics</li>
+                <li data-i18n="project1.point2">Built with Flutter and shaped like a real product</li>
+                <li data-i18n="project1.point3">Mixes productivity logic with playful UI thinking</li>
+              </ul>
+              <div class="tag-row"><span>Flutter</span><span>Dart</span><span>Supabase</span><span>Gamification</span></div>
+            </div>
+            <div class="project-visual phone-visual" aria-hidden="true">
+              <div class="phone-shell">
+                <div class="phone-top"></div>
+                <div class="phone-screen">
+                  <div class="pet-bubble"></div>
+                  <div class="timer-badge">25:00</div>
+                  <div class="mini-card"></div>
+                  <div class="mini-chart"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/4rc4/CatudyV2" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal spotlight-card" style="--card-accent:#30c6ff;">
+          <div class="project-meta">
+            <span class="project-index">02</span>
+            <span class="project-kind" data-i18n="project2.kind">Bilingual product website</span>
+          </div>
+          <div class="project-main">
+            <div class="project-copy">
+              <h3>Catudy Website</h3>
+              <p data-i18n="project2.desc">A public-facing website for the Catudy concept with bilingual content, feature sections, demo links, and a clearer product presentation.</p>
+              <ul class="project-points">
+                <li data-i18n="project2.point1">Explains the product idea in a clean landing page format</li>
+                <li data-i18n="project2.point2">Includes demo / APK directions and feature breakdowns</li>
+                <li data-i18n="project2.point3">Designed to present the app like a real release</li>
+              </ul>
+              <div class="tag-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+            </div>
+            <div class="project-visual browser-visual" aria-hidden="true">
+              <div class="browser-shell">
+                <div class="browser-top"><i></i><i></i><i></i></div>
+                <div class="browser-body">
+                  <div class="browser-hero"></div>
+                  <div class="browser-lines"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://4rc4.github.io/Catudy-Site/" target="_blank" rel="noreferrer" data-i18n="links.live">Live</a>
+            <a href="https://github.com/4rc4/Catudy-Site" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal spotlight-card" style="--card-accent:#ff5f83;">
+          <div class="project-meta">
+            <span class="project-index">03</span>
+            <span class="project-kind" data-i18n="project3.kind">Client-style website</span>
+          </div>
+          <div class="project-main">
+            <div class="project-copy">
+              <h3>Dr. Hicran Ünlü Website</h3>
+              <p data-i18n="project3.desc">A website for a dermatology clinic with service sections, appointment CTA, a clean structure, and a more trust-based presentation style.</p>
+              <ul class="project-points">
+                <li data-i18n="project3.point1">Focuses on clarity, trust, and fast access to services</li>
+                <li data-i18n="project3.point2">Includes medical aesthetics content and appointment flow</li>
+                <li data-i18n="project3.point3">Shows I can build outside my own product ideas too</li>
+              </ul>
+              <div class="tag-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
+            </div>
+            <div class="project-visual clinic-visual" aria-hidden="true">
+              <div class="clinic-shell">
+                <div class="clinic-cross">+</div>
+                <div class="clinic-line"></div>
+                <div class="clinic-cards"><span></span><span></span><span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://4rc4.github.io/drhicranunlu/" target="_blank" rel="noreferrer" data-i18n="links.live">Live</a>
+            <a href="https://github.com/4rc4/drhicranunlu" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-row reveal">
+          <article class="mini-project spotlight-card" style="--card-accent:#f9b23c;">
+            <div>
+              <p class="project-kind" data-i18n="project4.kind">Solo Unity project</p>
+              <h3 data-i18n="project4.title">Unity Story Game</h3>
+              <p data-i18n="project4.desc">A narrative mini-game I developed solo, including gameplay logic, animations, scene transitions, and original music.</p>
+            </div>
+            <div class="tag-row"><span>Unity</span><span>Animation</span><span>Music</span></div>
+          </article>
+
+          <article class="mini-project spotlight-card" style="--card-accent:#00d28f;">
+            <div>
+              <p class="project-kind" data-i18n="project5.kind">Meta project / portfolio</p>
+              <h3 data-i18n="project5.title">Interactive Portfolio</h3>
+              <p data-i18n="project5.desc">This website itself: a bilingual, animated portfolio built to present my work with a more cinematic and personal feeling.</p>
+            </div>
+            <div class="tag-row"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Motion</span></div>
+          </article>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene experience" id="experience">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="experience.kicker">Education & work</p>
+        <h2 data-i18n="experience.title">What I studied and where I actually worked.</h2>
+      </div>
+
+      <div class="experience-grid">
+        <div class="timeline-card reveal">
+          <div class="timeline-line"></div>
+          <article class="timeline-item">
+            <span class="timeline-date">2023 — Present</span>
+            <h3>WSB Merito Wrocław</h3>
+            <p data-i18n="timeline.edu">Software Development student, currently in the third year.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-date">2025 — Present</span>
+            <h3>Eternis</h3>
+            <p data-i18n="timeline.courier">Courier work in Wrocław while continuing software studies and personal projects.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-date">2024 — 2025</span>
+            <h3>QSense</h3>
+            <p data-i18n="timeline.qsense">Team-based labor work handling heavy battery units safely and efficiently.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-date">2024</span>
+            <h3>Cafe Mola</h3>
+            <p data-i18n="timeline.barista">Customer service, barista, waiter, and cashier tasks in a fast-paced environment.</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-date">2023</span>
+            <h3>Aras Kargo</h3>
+            <p data-i18n="timeline.logistic">Supported logistics operations with shipments, returns, pickups, and system entries.</p>
+          </article>
+        </div>
+
+        <div class="experience-panel reveal delay-1">
+          <div class="glass-card strong learning-card">
+            <p class="panel-label" data-i18n="experience.learningLabel">Current focus</p>
+            <h3 data-i18n="experience.learningTitle">Turning practice into cleaner, more complete projects.</h3>
+            <p data-i18n="experience.learningText">I am still improving, but I already have real project material, teamwork experience, and a clear direction: better UI, better code structure, and more finished work.</p>
+
+            <div class="focus-list">
+              <div><span>01</span><strong data-i18n="experience.focus1">Frontend with motion</strong></div>
+              <div><span>02</span><strong data-i18n="experience.focus2">Flutter app structure</strong></div>
+              <div><span>03</span><strong data-i18n="experience.focus3">Backend and deployment basics</strong></div>
+              <div><span>04</span><strong data-i18n="experience.focus4">UI that feels less generic</strong></div>
+            </div>
+          </div>
+
+          <div class="compact-badges">
+            <span data-i18n="experience.badge1">Fast learner</span>
+            <span data-i18n="experience.badge2">Team adaptable</span>
+            <span data-i18n="experience.badge3">Visual thinking</span>
+            <span data-i18n="experience.badge4">Motivated</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene skills" id="skills">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-i18n="skills.kicker">Tools and strengths</p>
+        <h2 data-i18n="skills.title">What I use, what I enjoy, and what I’m improving.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal spotlight-card" style="--card-accent:#30c6ff;">
+          <span>01</span>
+          <h3 data-i18n="skills.frontendTitle">Frontend</h3>
+          <p data-i18n="skills.frontendText">HTML, CSS, JavaScript, responsive layout work, and interfaces with motion.</p>
+        </article>
+        <article class="skill-card reveal spotlight-card" style="--card-accent:#8c6cff;">
+          <span>02</span>
+          <h3 data-i18n="skills.mobileTitle">Mobile</h3>
+          <p data-i18n="skills.mobileText">Flutter and Dart, especially for app structure, screens, and feature thinking.</p>
+        </article>
+        <article class="skill-card reveal spotlight-card" style="--card-accent:#00d28f;">
+          <span>03</span>
+          <h3 data-i18n="skills.backendTitle">Backend & Data</h3>
+          <p data-i18n="skills.backendText">Python, SQL basics, Supabase, and ongoing learning in web backend and deployment.</p>
+        </article>
+        <article class="skill-card reveal spotlight-card" style="--card-accent:#ff5f83;">
+          <span>04</span>
+          <h3 data-i18n="skills.creativeTitle">Creative Side</h3>
+          <p data-i18n="skills.creativeText">Drawing, animation, music creation, and interactive storytelling.</p>
+        </article>
+      </div>
+
+      <div class="language-strip reveal">
+        <div class="language-card">
+          <span data-i18n="skills.languagesTitle">Languages</span>
+          <ul class="language-list">
+            <li><strong data-i18n="skills.langEnglish">English</strong><em>B2–C1</em></li>
+            <li><strong data-i18n="skills.langTurkish">Turkish</strong><em data-i18n="skills.langNative">Native</em></li>
+            <li><strong data-i18n="skills.langPolish">Polish</strong><em data-i18n="skills.langBeginner">Beginner</em></li>
+          </ul>
+        </div>
+        <div><span data-i18n="skills.hobbiesTitle">Hobbies</span><strong data-i18n="skills.hobbiesValue">Drawing, creating music, creating animation</strong></div>
+      </div>
+    </section>
+
+    <section class="scene contact" id="contact">
+      <div class="contact-panel reveal">
+        <p class="eyebrow" data-i18n="contact.kicker">Contact</p>
+        <h2 data-i18n="contact.title">If you have a project, internship, or a good idea, let’s talk.</h2>
+        <p data-i18n="contact.text">I’m interested in opportunities where I can keep improving technically while also using my eye for UI, interaction, and product feel.</p>
+
+        <div class="contact-links">
+          <a href="mailto:arcacicek1@gmail.com">arcacicek1@gmail.com</a>
+          <a href="https://github.com/4rc4" target="_blank" rel="noreferrer">github.com/4rc4</a>
+          <a href="https://www.linkedin.com/in/yusuf-arca-cicek-030688299/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Yusuf Arca Çiçek</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
