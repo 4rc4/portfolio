@@ -18,7 +18,7 @@ const translations = {
     "hero.panelFocus": "Web, mobile, UI, interactive ideas",
     "hero.panelStatusLabel": "Status",
     "hero.panelStatus": "Open to internships and collaborations",
-    "hero.note": "This site is here to show real work, real learning, and the way I like to build.",
+    "hero.note": "This site is here to show, my real learning and the way I like to build.",
     "hero.statProjects": "Main projects",
     "hero.statAreas": "Build areas",
     "hero.statLanguages": "Site languages",
@@ -29,8 +29,7 @@ const translations = {
     "story.p2": "My interests naturally mix code with visuals. That is why I enjoy interfaces, animation, interaction, and product ideas — not just writing logic in the background.",
     "story.p3": "This portfolio is not trying to sound bigger than I am. It is a clean selection of what I made, what I learned, and what kind of developer I am becoming.",
 
-    "projects.kicker": "Selected work",
-    "projects.title": "Projects that already exist, not fake case studies.",
+    "projects.kicker": "My works",
     "projects.text": "A mix of product thinking, UI work, web development, and small interactive experiments.",
 
     "project1.kind": "Flutter app / productivity",
@@ -43,7 +42,7 @@ const translations = {
     "project2.desc": "A public-facing website for the Catudy concept with bilingual content, feature sections, demo links, and a clearer product presentation.",
     "project2.point1": "Explains the product idea in a clean landing page format",
     "project2.point2": "Includes demo / APK directions and feature breakdowns",
-    "project2.point3": "Designed to present the app like a real release",
+    "project2.point3": "Designed to present the app like a real release (it will be released eventually)",
 
     "project3.kind": "Client-style website",
     "project3.desc": "A website for a dermatology clinic with service sections, appointment CTA, a clean structure, and a more trust-based presentation style.",
@@ -133,10 +132,9 @@ const translations = {
     "story.title": "Hâlâ öğreniyorum. Sadece öğrenirken gerçek şeyler üretmeyi tercih ediyorum.",
     "story.p1": "WSB Merito Wrocław'da Software Development okuyorum. Aklıma gelen fikirleri notlarda bırakmak yerine gerçek projelerde denemeyi seviyorum. Hem düzeni hem de karakteri olan işler hoşuma gidiyor.",
     "story.p2": "İlgi alanlarım doğal olarak kodu görsel tarafla birleştiriyor. Bu yüzden sadece arka planda mantık yazmak değil; arayüz, animasyon, etkileşim ve ürün fikri tarafı da beni çekiyor.",
-    "story.p3": "Bu portfolyo kendimi olduğumdan büyük göstermek için hazırlanmadı. Yaptığım işleri, öğrendiklerimi ve nasıl bir geliştiriciye dönüştüğümü temiz bir şekilde göstermek için var.",
+    "story.p3": "Bu portfolyoyu kendimi olduğumdan büyük göstermek için hazırlamadım. Yaptığım işleri, öğrendiklerimi ve nasıl bir geliştiriciye dönüştüğümü temiz bir şekilde göstermek için hazırladım.",
 
-    "projects.kicker": "Seçilmiş işler",
-    "projects.title": "Gerçekten var olan projeler, uydurma case study'ler değil.",
+    "projects.kicker": "Işlerim",
     "projects.text": "Ürün düşüncesi, UI çalışmaları, web geliştirme ve küçük etkileşimli denemelerin karışımı.",
 
     "project1.kind": "Flutter uygulaması / üretkenlik",
