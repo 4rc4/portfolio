@@ -367,3 +367,75 @@ function onScroll() {
 
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
+
+function setupInfiniteTicker(ticker) {
+  const track = ticker.querySelector(".ticker-track");
+  const originalGroup = ticker.querySelector(".ticker-group");
+
+  if (!track || !originalGroup) return;
+
+  const groupHTML = originalGroup.innerHTML;
+
+  track.innerHTML = "";
+
+  const firstGroup = document.createElement("div");
+  firstGroup.className = "ticker-group";
+  firstGroup.innerHTML = groupHTML;
+  track.appendChild(firstGroup);
+
+  const groupWidth = firstGroup.scrollWidth;
+  track.style.setProperty("--ticker-distance", `-${groupWidth}px`);
+
+  while (track.scrollWidth < window.innerWidth * 2 + groupWidth) {
+    const clone = firstGroup.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    track.appendChild(clone);
+  }
+}
+
+function setupAllTickers() {
+  document.querySelectorAll(".ticker").forEach(setupInfiniteTicker);
+}
+
+window.addEventListener("load", setupAllTickers);
+
+let tickerResizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(tickerResizeTimer);
+  tickerResizeTimer = setTimeout(setupAllTickers, 150);
+});
+
+const hud = document.querySelector(".hud");
+
+let lastScrollY = window.scrollY;
+let topMouseActive = false;
+
+function updateHud() {
+  if (!hud) return;
+
+  const currentScrollY = window.scrollY;
+  const scrollingDown = currentScrollY > lastScrollY;
+  const scrollingUp = currentScrollY < lastScrollY;
+  const awayFromTop = currentScrollY > 90;
+
+  hud.classList.toggle("hud-scrolled", awayFromTop);
+
+  if (awayFromTop && scrollingDown && !topMouseActive) {
+    hud.classList.add("hud-hidden");
+  }
+
+  if (scrollingUp || !awayFromTop || topMouseActive) {
+    hud.classList.remove("hud-hidden");
+  }
+
+  lastScrollY = Math.max(currentScrollY, 0);
+}
+
+window.addEventListener("scroll", updateHud, { passive: true });
+
+window.addEventListener("mousemove", (event) => {
+  topMouseActive = event.clientY < 90;
+  updateHud();
+});
+
+updateHud();

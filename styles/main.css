@@ -1086,3 +1086,252 @@ main {
   .footer { flex-direction: column; }
   .beam { filter: blur(56px); }
 }
+
+.real-screen {
+  padding: 0;
+  background: #111;
+}
+
+.real-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.real-phone {
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.03));
+}
+
+.real-browser {
+  width: min(100%, 420px);
+  min-height: 270px;
+  overflow: hidden;
+}
+
+.real-browser .browser-top {
+  align-items: center;
+}
+
+.browser-url {
+  margin-left: 8px;
+  color: var(--muted-2);
+  font-size: .72rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.real-browser-body {
+  padding: 0;
+  height: 230px;
+  overflow: hidden;
+  background: rgba(255,255,255,.03);
+}
+
+.real-browser-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  filter: saturate(.95) contrast(1.04);
+  transition: transform .7s var(--ease), filter .7s var(--ease);
+}
+
+.project-card:hover .real-browser-body img {
+  transform: scale(1.045);
+  filter: saturate(1.08) contrast(1.07);
+}
+
+.project-card:hover .real-screen img {
+  transform: scale(1.035);
+}
+
+.real-screen img {
+  transition: transform .7s var(--ease);
+}
+
+/* Hard fix: force visible space between project cards */
+
+#projects .project-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+#projects .project-card {
+  margin-bottom: 42px !important;
+}
+
+#projects .project-row {
+  margin-top: 0 !important;
+  margin-bottom: 42px !important;
+  gap: 32px !important;
+}
+
+#projects .project-card:last-child,
+#projects .project-row:last-child {
+  margin-bottom: 0 !important;
+}
+
+.hud {
+  transition:
+    transform .42s var(--ease),
+    opacity .32s ease,
+    width .38s var(--ease),
+    padding .38s var(--ease),
+    border-radius .38s var(--ease),
+    background .38s ease,
+    box-shadow .38s ease;
+  animation: hudIntro .85s var(--ease) both;
+  will-change: transform, opacity;
+}
+
+@keyframes hudIntro {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-28px) scale(.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+/* Scroll aşağı: kaybolur */
+.hud.hud-hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(calc(-100% - 28px)) scale(.98);
+  pointer-events: none;
+}
+
+/* Scroll sonrası: daha küçük floating bar */
+.hud.hud-scrolled {
+  width: min(calc(100% - 44px), 1040px);
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(8, 10, 16, 0.82);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, .42);
+}
+
+/* Üstteyken daha geniş ve sakin */
+.hud:not(.hud-scrolled) {
+  width: min(calc(100% - 28px), 1240px);
+}
+
+/* Linklere ufak hareket */
+.hud-nav a,
+.hud-button,
+.lang-button {
+  transition:
+    transform .22s ease,
+    color .22s ease,
+    background .22s ease,
+    border-color .22s ease;
+}
+
+.hud-nav a:hover,
+.hud-button:hover,
+.lang-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Mobilde daha stabil kalsın */
+@media (max-width: 760px) {
+  .hud.hud-scrolled {
+    width: calc(100% - 16px);
+    padding: 10px 12px;
+  }
+}
+
+/* Screenshot pan animation inside project frames */
+
+.real-browser-body img {
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition:
+    transform 2.6s cubic-bezier(.22,1,.36,1),
+    filter .6s ease;
+}
+
+.project-card:hover .real-browser-body img {
+  transform: translateY(-18%) scale(1.03);
+  filter: saturate(1.08) contrast(1.06);
+}
+
+.real-screen img {
+  transition:
+    transform 1.2s cubic-bezier(.22,1,.36,1),
+    filter .6s ease;
+}
+
+.project-card:hover .real-screen img {
+  transform: scale(1.045);
+  filter: saturate(1.08) contrast(1.05);
+}
+
+/* Contact signal pulse */
+
+.contact-panel::before {
+  content: "";
+  position: absolute;
+  right: 8%;
+  top: 16%;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 1px solid rgba(48, 198, 255, 0.32);
+  box-shadow:
+    0 0 0 0 rgba(48, 198, 255, 0.16),
+    inset 0 0 38px rgba(48, 198, 255, 0.08);
+  animation: signalPulse 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes signalPulse {
+  0% {
+    transform: scale(.82);
+    opacity: .25;
+    box-shadow: 0 0 0 0 rgba(48, 198, 255, 0.18);
+  }
+
+  60% {
+    opacity: .7;
+    box-shadow: 0 0 0 42px rgba(48, 198, 255, 0);
+  }
+
+  100% {
+    transform: scale(1.04);
+    opacity: .2;
+    box-shadow: 0 0 0 0 rgba(48, 198, 255, 0);
+  }
+}
+/* Absolute project spacing reset */
+
+#projects .project-list {
+  display: block !important;
+}
+
+#projects .project-card,
+#projects .project-row {
+  display: block;
+  width: 100%;
+  margin: 0 0 52px 0 !important;
+  position: relative;
+}
+
+#projects .project-card:last-child,
+#projects .project-row:last-child {
+  margin-bottom: 0 !important;
+}
+#projects .project-row {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px !important;
+}
